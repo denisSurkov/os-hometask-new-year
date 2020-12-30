@@ -1,0 +1,10 @@
+[Unit]
+Description=logger-task
+
+[Service]
+WorkingDirectory=/var/log/
+ExecStart=/usr/bin/python3 /usr/bin/logs_generator.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
